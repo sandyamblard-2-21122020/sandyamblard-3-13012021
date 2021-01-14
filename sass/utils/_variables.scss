@@ -15,4 +15,5 @@ $restaurants: lapalettedugout, lanoteenchantee, alafrancaise, ledelicedessens;
 
 @mixin ombre-hover {
   box-shadow: 4px 4px 4px #838282;
+  transition: 0.3s;
 }
