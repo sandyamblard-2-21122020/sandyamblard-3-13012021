@@ -1,0 +1,20 @@
+.header {
+  width: 100%;
+  padding-top: 1.2vw;
+  border-bottom: 1px #efefef solid;
+  box-shadow: 0 4px 4px rgba(163, 162, 162, 0.5);
+  z-index: 2;
+  &__logo {
+    width: 60vw;
+    margin-left: 20vw;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+  }
+}
+
+.header__pict {
+  width: 100vw;
+  height: 78vw;
+  background-image: url(/img/lapalettedugout.jpg);
+  background-size: cover;
+}

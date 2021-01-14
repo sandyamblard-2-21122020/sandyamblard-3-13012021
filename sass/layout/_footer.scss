@@ -1,0 +1,19 @@
+.footer {
+  background-color: $color-footer;
+  padding: 1rem;
+  color: #ffffff;
+  p {
+    font-size: 0.9rem;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .fas {
+    color: white;
+    margin-right: 0.5rem;
+  }
+  .fa-handshake {
+    transform: rotate(-35deg);
+  }
+}

@@ -1,5 +1,18 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
+$color-fond: #f6f6f6;
+$color-footer: #353535;
+
 $font-logo: "Shrikhand", cursive;
 $font-texte: "Roboto", sans-serif;
+
+$restaurants: lapalettedugout, lanoteenchantee, alafrancaise, ledelicedessens;
+
+@mixin ombre {
+  box-shadow: 3px 4px 3px #e4e3e3;
+}
+
+@mixin ombre-hover {
+  box-shadow: 4px 4px 4px #838282;
+}
