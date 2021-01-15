@@ -177,7 +177,7 @@ h5 {
 }
 
 .entete__pict--lapalettedugout {
-  background-image: url(/img/lapalettedugout.jpg);
+  background-image: url("/img/lapalettedugout.jpg");
   width: 100vw;
   height: 50vw;
   background-size: cover;
@@ -185,7 +185,7 @@ h5 {
 }
 
 .entete__pict--lanoteenchantee {
-  background-image: url(/img/lanoteenchantee.jpg);
+  background-image: url("/img/lanoteenchantee.jpg");
   width: 100vw;
   height: 50vw;
   background-size: cover;
@@ -193,7 +193,7 @@ h5 {
 }
 
 .entete__pict--alafrancaise {
-  background-image: url(/img/alafrancaise.jpg);
+  background-image: url("/img/alafrancaise.jpg");
   width: 100vw;
   height: 50vw;
   background-size: cover;
@@ -201,7 +201,7 @@ h5 {
 }
 
 .entete__pict--ledelicedessens {
-  background-image: url(/img/ledelicedessens.jpg);
+  background-image: url("/img/ledelicedessens.jpg");
   width: 100vw;
   height: 50vw;
   background-size: cover;
@@ -429,7 +429,6 @@ h5 {
   color: #ffffff;
   font-weight: 600;
   line-height: 12vw;
-  /*transition: all 0.3s;*/
 }
 
 .bouton--arrondi:hover, .bouton--arrondi:active {
@@ -454,10 +453,9 @@ h5 {
   font-weight: 600;
   text-align: center;
   background-color: #f6f6f6;
-  border-radius: 25px;
+  border-radius: 20px;
   -webkit-box-shadow: 3px 4px 3px #e4e3e3;
           box-shadow: 3px 4px 3px #e4e3e3;
-  /*transition: all 0.2s;*/
 }
 
 .etape:hover, .etape:active {

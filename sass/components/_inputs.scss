@@ -31,7 +31,6 @@
   color: #ffffff;
   font-weight: 600;
   line-height: 12vw;
-  /*transition: all 0.3s;*/
   &:hover,
   &:active {
     @include ombre-hover;
@@ -50,9 +49,8 @@
   font-weight: 600;
   text-align: center;
   background-color: $color-fond;
-  border-radius: 25px;
+  @include bordradius;
   @include ombre;
-  /*transition: all 0.2s;*/
   &:hover,
   &:active {
     background-color: rgba($color-primary, 0.15);
