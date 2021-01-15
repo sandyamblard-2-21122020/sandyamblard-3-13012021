@@ -5,16 +5,13 @@
   &__textlight {
     font-weight: 100;
   }
-  p {
-    font-size: 0.9rem;
-  }
+
   a {
     text-decoration: none;
     color: inherit;
     &:hover,
     &:active {
       text-decoration: underline;
-      transition: 3s;
     }
   }
 

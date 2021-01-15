@@ -7,6 +7,8 @@ $color-footer: #353535;
 $font-logo: "Shrikhand", cursive;
 $font-texte: "Roboto", sans-serif;
 
+$height-header: 18vw;
+
 $restaurants: lapalettedugout, lanoteenchantee, alafrancaise, ledelicedessens;
 
 @mixin ombre {
@@ -15,5 +17,23 @@ $restaurants: lapalettedugout, lanoteenchantee, alafrancaise, ledelicedessens;
 
 @mixin ombre-hover {
   box-shadow: 4px 4px 4px #838282;
-  transition: 0.3s;
+  transition: box-shadow 0.4s;
+}
+
+@mixin bordradius {
+  border-radius: 20px;
+}
+
+@keyframes tourcomplet {
+  0% {
+    /*transform: translateX(15vw);*/
+    transform: rotate(0deg);
+  }
+  50% {
+    /*transform: translateX(7, 5vw);*/
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
 }

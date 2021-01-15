@@ -1,0 +1,125 @@
+.pages {
+  background-color: $color-fond;
+}
+
+.menus {
+  width: 100%;
+  margin: 0;
+  padding-top: 0rem;
+}
+
+.entrees div:last-child,
+.plats div:last-child,
+.desserts div:last-child {
+  margin-bottom: 9vw;
+}
+
+.titremenus {
+  text-transform: uppercase;
+  font-weight: 400;
+  &::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.3rem;
+    background-color: $color-tertiary;
+  }
+}
+
+.menuitem {
+  width: 90vw;
+  height: 20vw;
+  background-color: white;
+  margin-left: 5vw;
+  margin-bottom: 4vw;
+  @include bordradius;
+  @include ombre;
+  overflow: hidden;
+  position: relative;
+  &__nom {
+    width: 85%;
+    height: 100%;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+    float: left;
+  }
+  &__nom h4 {
+    padding-bottom: 0rem;
+    padding-top: 0.5rem;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__nom p {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__prix {
+    width: 15%;
+    height: 100%;
+    padding-top: 1.2em;
+    padding-bottom: 3.5vw;
+    padding-right: 7vw;
+    padding-left: 3vw;
+    font-size: 1.2rem;
+    font-weight: 900;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  &:hover {
+    @include ombre-hover;
+    > .menuitem__prix {
+      transform: translateX(-14vw);
+      transition: transform 0.5s;
+    }
+    > .menuitem__nom {
+      width: 70%;
+      transition: width 0.5s;
+    }
+    > .menuitem__icone {
+      transform: translateX(-14vw);
+      transition: transform 0.5s;
+      right: -16%;
+    }
+    > .menuitem__icone > .fa-check-circle {
+      animation-name: tourcomplet;
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+    }
+  }
+}
+
+.menuitem__icone {
+  background-color: $color-tertiary;
+  height: 100%;
+  width: 15%;
+  margin-bottom: 0;
+  margin-top: 0;
+  overflow: hidden;
+  border-radius: 0 20px 20px 0;
+
+  float: right;
+  transform: translateX(14vw);
+  position: absolute;
+  right: 0;
+  .fa-check-circle {
+    background-color: $color-tertiary;
+    color: white;
+    font-size: 2rem;
+    padding-left: 4vw;
+    padding-right: 4.5vw;
+    padding-top: 6vw;
+    padding-bottom: 7vw;
+  }
+}
