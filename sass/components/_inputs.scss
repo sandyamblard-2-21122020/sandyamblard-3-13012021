@@ -55,10 +55,11 @@
   &:hover,
   &:active {
     background-color: rgba($color-primary, 0.15);
+    transition: 0.3s;
     @include ombre-hover;
     > .fas {
       color: $color-primary;
-      transition: 0.3s;
+      transition: 0.2s;
     }
   }
   .fas {
