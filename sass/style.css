@@ -1,34 +1,46 @@
-@-webkit-keyframes tourcomplet {
+@-webkit-keyframes entreeitems {
   0% {
-    /*transform: translateX(15vw);*/
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: translateY(4vh);
+            transform: translateY(4vh);
+    opacity: 0;
   }
   50% {
-    /*transform: translateX(7, 5vw);*/
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    -webkit-transform: translateY(2vh);
+            transform: translateY(2vh);
+    opacity: 0.3;
+  }
+  75% {
+    -webkit-transform: translateY(1vh);
+            transform: translateY(1vh);
+    opacity: 0.5;
   }
   100% {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 
-@keyframes tourcomplet {
+@keyframes entreeitems {
   0% {
-    /*transform: translateX(15vw);*/
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: translateY(4vh);
+            transform: translateY(4vh);
+    opacity: 0;
   }
   50% {
-    /*transform: translateX(7, 5vw);*/
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    -webkit-transform: translateY(2vh);
+            transform: translateY(2vh);
+    opacity: 0.3;
+  }
+  75% {
+    -webkit-transform: translateY(1vh);
+            transform: translateY(1vh);
+    opacity: 0.5;
   }
   100% {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -162,8 +174,8 @@ h5 {
 
 .listeresto a:active > .article,
 .listeresto a:hover > .article {
-  -webkit-box-shadow: 4px 4px 4px #838282;
-          box-shadow: 4px 4px 4px #838282;
+  -webkit-box-shadow: 3px 3px 18px #838282;
+          box-shadow: 3px 3px 18px #838282;
   -webkit-transition: -webkit-box-shadow 0.4s;
   transition: -webkit-box-shadow 0.4s;
   transition: box-shadow 0.4s;
@@ -259,13 +271,49 @@ h5 {
   width: 90vw;
   height: 20vw;
   background-color: white;
-  margin-left: 5vw;
+  margin-left: 4.5vw;
   margin-bottom: 4vw;
   border-radius: 20px;
-  -webkit-box-shadow: 3px 4px 3px #e4e3e3;
-          box-shadow: 3px 4px 3px #e4e3e3;
+  -webkit-box-shadow: 1px 1px 18px #e4e3e3;
+          box-shadow: 1px 1px 18px #e4e3e3;
   overflow: hidden;
   position: relative;
+  -webkit-animation-name: entreeitems;
+          animation-name: entreeitems;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  /*animation-delay: 0;*/
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.menuitem:first-child {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.menuitem:nth-child(2) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.menuitem:nth-child(3) {
+  -webkit-animation-delay: 0.08s;
+          animation-delay: 0.08s;
+}
+
+.menuitem:nth-child(4) {
+  -webkit-animation-delay: 0.16s;
+          animation-delay: 0.16s;
+}
+
+.menuitem:nth-child(5) {
+  -webkit-animation-delay: 0.24s;
+          animation-delay: 0.24s;
 }
 
 .menuitem__nom {
@@ -327,8 +375,8 @@ h5 {
 }
 
 .menuitem:hover {
-  -webkit-box-shadow: 4px 4px 4px #838282;
-          box-shadow: 4px 4px 4px #838282;
+  -webkit-box-shadow: 3px 3px 18px #838282;
+          box-shadow: 3px 3px 18px #838282;
   -webkit-transition: -webkit-box-shadow 0.4s;
   transition: -webkit-box-shadow 0.4s;
   transition: box-shadow 0.4s;
@@ -361,12 +409,10 @@ h5 {
 }
 
 .menuitem:hover > .menuitem__icone > .fa-check-circle {
-  -webkit-animation-name: tourcomplet;
-          animation-name: tourcomplet;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .menuitem__icone {
@@ -388,10 +434,15 @@ h5 {
   background-color: #99e2d0;
   color: white;
   font-size: 2rem;
-  padding-left: 4vw;
-  padding-right: 4.5vw;
   padding-top: 6vw;
   padding-bottom: 7vw;
+  /*line-height: 250%;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .saisieville {
@@ -421,8 +472,8 @@ h5 {
   margin-bottom: 10vw;
   margin-top: 5vw;
   border-radius: 29px;
-  -webkit-box-shadow: 3px 4px 3px #e4e3e3;
-          box-shadow: 3px 4px 3px #e4e3e3;
+  -webkit-box-shadow: 1px 1px 18px #e4e3e3;
+          box-shadow: 1px 1px 18px #e4e3e3;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(#ff79da, #9356dc);
   text-align: center;
@@ -432,8 +483,8 @@ h5 {
 }
 
 .bouton--arrondi:hover, .bouton--arrondi:active {
-  -webkit-box-shadow: 4px 4px 4px #838282;
-          box-shadow: 4px 4px 4px #838282;
+  -webkit-box-shadow: 3px 3px 18px #838282;
+          box-shadow: 3px 3px 18px #838282;
   -webkit-transition: -webkit-box-shadow 0.4s;
   transition: -webkit-box-shadow 0.4s;
   transition: box-shadow 0.4s;
@@ -447,21 +498,22 @@ h5 {
   position: relative;
   width: 90vw;
   height: 18vw;
-  margin-left: 4vw;
+  margin-left: 5vw;
   margin-bottom: 5vw;
-  padding-top: 7.4vw;
+  /*padding-top: 7.4vw;*/
+  line-height: 18vw;
   font-weight: 600;
   text-align: center;
   background-color: #f6f6f6;
   border-radius: 20px;
-  -webkit-box-shadow: 3px 4px 3px #e4e3e3;
-          box-shadow: 3px 4px 3px #e4e3e3;
+  -webkit-box-shadow: 1px 1px 18px #e4e3e3;
+          box-shadow: 1px 1px 18px #e4e3e3;
 }
 
 .etape:hover, .etape:active {
   background-color: rgba(147, 86, 220, 0.15);
-  -webkit-box-shadow: 4px 4px 4px #838282;
-          box-shadow: 4px 4px 4px #838282;
+  -webkit-box-shadow: 3px 3px 18px #838282;
+          box-shadow: 3px 3px 18px #838282;
   -webkit-transition: -webkit-box-shadow 0.4s;
   transition: -webkit-box-shadow 0.4s;
   transition: box-shadow 0.4s;
@@ -481,7 +533,8 @@ h5 {
 .etape__number {
   width: 1.5rem;
   height: 1.5rem;
-  padding-top: 0.3rem;
+  /*padding-top: 0.3rem;*/
+  line-height: 1.5rem;
   font-size: 0.8rem;
   color: white;
   font-weight: 400;
@@ -522,17 +575,17 @@ h5 {
 button {
   border: 0px;
   font-family: "Roboto", sans-serif;
-  padding-bottom: 1rem;
+  /*padding-bottom: 1rem;*/
 }
 
 .article {
   width: 90vw;
   height: 65vw;
-  margin-left: 4vw;
+  margin-left: 5vw;
   margin-bottom: 5vw;
   border-radius: 20px;
-  -webkit-box-shadow: 3px 4px 3px #e4e3e3;
-          box-shadow: 3px 4px 3px #e4e3e3;
+  -webkit-box-shadow: 1px 1px 18px #e4e3e3;
+          box-shadow: 1px 1px 18px #e4e3e3;
   background-color: white;
 }
 
@@ -547,6 +600,9 @@ button {
 .article__legende {
   margin: 0.5rem;
   padding: 0.3rem;
+  /*display: flex;
+    flex-direction: column;
+    justify-content: space-between;*/
   position: relative;
 }
 
@@ -605,7 +661,7 @@ button {
   background-color: #99e2d0;
   width: 25vw;
   height: 6vw;
-  padding-top: 0.8vw;
+  line-height: 6vw;
   margin-left: 62vw;
   margin-top: 3vw;
   text-align: center;

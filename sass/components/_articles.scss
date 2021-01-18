@@ -1,9 +1,9 @@
 .article {
   width: 90vw;
   height: 65vw;
-  margin-left: 4vw;
+  margin-left: 5vw;
   margin-bottom: 5vw;
-  border-radius: 20px;
+  @include bordradius;
   @include ombre;
   background-color: white;
   &__pict {
@@ -16,6 +16,9 @@
   &__legende {
     margin: 0.5rem;
     padding: 0.3rem;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: space-between;*/
     position: relative;
   }
   p {
@@ -60,7 +63,7 @@
   background-color: $color-tertiary;
   width: 25vw;
   height: 6vw;
-  padding-top: 0.8vw;
+  line-height: 6vw;
   margin-left: 62vw;
   margin-top: 3vw;
   text-align: center;

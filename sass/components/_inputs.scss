@@ -43,9 +43,10 @@
   position: relative;
   width: 90vw;
   height: 18vw;
-  margin-left: 4vw;
+  margin-left: 5vw;
   margin-bottom: 5vw;
-  padding-top: 7.4vw;
+  /*padding-top: 7.4vw;*/
+  line-height: 18vw;
   font-weight: 600;
   text-align: center;
   background-color: $color-fond;
@@ -66,7 +67,8 @@
   &__number {
     width: 1.5rem;
     height: 1.5rem;
-    padding-top: 0.3rem;
+    /*padding-top: 0.3rem;*/
+    line-height: 1.5rem;
     font-size: 0.8rem;
     color: white;
     font-weight: 400;
@@ -107,5 +109,5 @@
 button {
   border: 0px;
   font-family: $font-texte;
-  padding-bottom: 1rem;
+  /*padding-bottom: 1rem;*/
 }

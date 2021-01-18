@@ -12,11 +12,11 @@ $height-header: 18vw;
 $restaurants: lapalettedugout, lanoteenchantee, alafrancaise, ledelicedessens;
 
 @mixin ombre {
-  box-shadow: 3px 4px 3px #e4e3e3;
+  box-shadow: 1px 1px 18px #e4e3e3;
 }
 
 @mixin ombre-hover {
-  box-shadow: 4px 4px 4px #838282;
+  box-shadow: 3px 3px 18px #838282;
   transition: box-shadow 0.4s;
 }
 
@@ -24,16 +24,21 @@ $restaurants: lapalettedugout, lanoteenchantee, alafrancaise, ledelicedessens;
   border-radius: 20px;
 }
 
-@keyframes tourcomplet {
+@keyframes entreeitems {
   0% {
-    /*transform: translateX(15vw);*/
-    transform: rotate(0deg);
+    transform: translateY(4vh);
+    opacity: 0;
   }
   50% {
-    /*transform: translateX(7, 5vw);*/
-    transform: rotate(180deg);
+    transform: translateY(2vh);
+    opacity: 0.3;
+  }
+  75% {
+    transform: translateY(1vh);
+    opacity: 0.5;
   }
   100% {
-    transform: rotate(359deg);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
