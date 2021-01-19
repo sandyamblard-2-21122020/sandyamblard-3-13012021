@@ -6,6 +6,34 @@
   border: 0px;
   text-align: center;
   font-weight: 700;
+  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+    width: 50vw;
+    height: 5vw;
+    @include bordradius;
+    margin-left: 25vw;
+    margin-top: 1.5vw;
+    border: 1px solid;
+    border-color: darken($color-fond, 9%);
+    @include ombre;
+    &:focus,
+    &:hover {
+      @include ombre-hover;
+    }
+  }
+  @media all and(min-width: $bkpt-tab) {
+    width: 25vw;
+    height: 2.4vw;
+    @include bordradius;
+    margin-left: 37.5vw;
+    margin-top: 1vw;
+    border: 1px solid;
+    border-color: darken($color-fond, 12%);
+    @include ombre;
+    &:hover,
+    &:focus {
+      @include ombre-hover;
+    }
+  }
 }
 
 .form--ville {
@@ -16,14 +44,22 @@
   position: absolute;
   top: 19%;
   left: 25%;
+  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+    top: 2.8vw;
+    left: 30vw;
+  }
+  @media all and(min-width: $bkpt-tab) {
+    top: 1.5vw;
+    left: 40vw;
+  }
 }
 
 .bouton--arrondi {
   width: 60vw;
   height: 12vw;
   margin-left: 20vw;
-  margin-bottom: 10vw;
-  margin-top: 5vw;
+  margin-bottom: 3vw;
+  margin-top: 3vw;
   border-radius: 29px;
   @include ombre;
   background: linear-gradient(#{$color-secondary}, #{$color-primary});
@@ -36,6 +72,20 @@
     @include ombre-hover;
     opacity: 0.75;
     transition: opacity 0.3s;
+  }
+  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+    width: 35vw;
+    height: 5vw;
+    line-height: 5vw;
+    margin-left: 32.5vw;
+  }
+  @media all and(min-width: $bkpt-tab) {
+    width: 25vw;
+    height: 3vw;
+    line-height: 3vw;
+    margin-left: 37.5vw;
+    margin-top: 2vw;
+    margin-bottom: 0.2vw;
   }
 }
 
@@ -83,9 +133,7 @@
 
 .coeurfavori {
   .far {
-    padding-right: 1rem;
-    position: relative;
-    font-size: 1.1rem;
+    font-size: 2rem;
     opacity: 1;
     &:hover,
     &:active {
@@ -94,17 +142,21 @@
     }
   }
   .fas {
-    padding-right: 1rem;
-    position: absolute;
-    right: 1.05rem;
+    font-size: 2rem;
+    transform: translateX(-115%);
     color: $color-primary;
     opacity: 0;
     &:hover,
     &:active {
       opacity: 1;
-      transition: all 0.6s;
+      transition: all 0.5s;
     }
   }
+}
+
+.coeurfavori:hover > .far {
+  opacity: 0;
+  transition: all 0.5s;
 }
 
 button {

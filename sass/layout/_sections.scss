@@ -8,6 +8,31 @@
     padding: 0 1rem;
     margin-top: 0px;
     font-size: 1.1rem;
+    @media all and(min-width: $bkpt-tab) {
+      font-size: 1rem;
+    }
+  }
+  h2 {
+    @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+      font-size: 1.5rem;
+    }
+    @media all and(min-width: $bkpt-tab) {
+      font-size: 1.5rem;
+    }
+  }
+  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+    padding-bottom: 0.1vw;
+    width: 95vw;
+    margin-left: 2.5vw;
+    margin-top: 1vw;
+    @include bordradius;
+  }
+  @media all and(min-width: $bkpt-tab) {
+    padding-bottom: 1vw;
+    width: 95vw;
+    margin-left: 2.55vw;
+    margin-top: 1vw;
+    @include bordradius;
   }
 }
 
@@ -39,6 +64,19 @@
     height: 50vw;
     background-size: cover;
     background-position: center 70%;
+    @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+      height: 25vw;
+    }
+    @media all and(min-width: $bkpt-tab) {
+      height: 15vw;
+      background-position: center 60%;
+    }
+  }
+}
+
+h1 {
+  @media all and(min-width: $bkpt-tab) {
+    font-size: 2rem;
   }
 }
 
@@ -46,10 +84,24 @@
   width: 100%;
   border-radius: 25px 25px 0 0;
   background-color: $color-fond;
-  margin-top: -5vw;
+  margin-top: -5.5vw;
   padding: 1rem;
   padding-top: 1.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+    margin-top: -3vw;
+    justify-content: space-around;
+    border-radius: 50px 50px 0 0;
+    width: 75vw;
+    margin-left: 12.5vw;
+  }
+  @media all and(min-width: $bkpt-tab) {
+    margin-top: -3vw;
+    justify-content: space-around;
+    border-radius: 75px 75px 0 0;
+    width: 75vw;
+    margin-left: 12.5vw;
+  }
 }
