@@ -6,30 +6,15 @@
   border: 0px;
   text-align: center;
   font-weight: 700;
-  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
-    width: 50vw;
-    height: 5vw;
-    @include bordradius;
-    margin-left: 25vw;
-    margin-top: 1.5vw;
+  &:focus {
+    background-color: rgba($color-fond, 0.1);
+    transition: background-color 0.3s;
+  }
+  @media all and (min-width: $bkpt-mob) {
+    border-radius: 20px 20px 0 0;
     border: 1px solid;
     border-color: darken($color-fond, 9%);
     @include ombre;
-    &:focus,
-    &:hover {
-      @include ombre-hover;
-    }
-  }
-  @media all and(min-width: $bkpt-tab) {
-    width: 25vw;
-    height: 2.4vw;
-    @include bordradius;
-    margin-left: 37.5vw;
-    margin-top: 1vw;
-    border: 1px solid;
-    border-color: darken($color-fond, 12%);
-    @include ombre;
-    &:hover,
     &:focus {
       @include ombre-hover;
     }
@@ -44,13 +29,8 @@
   position: absolute;
   top: 19%;
   left: 25%;
-  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
-    top: 2.8vw;
-    left: 30vw;
-  }
-  @media all and(min-width: $bkpt-tab) {
-    top: 1.5vw;
-    left: 40vw;
+  @media all and (min-width: $bkpt-mob) {
+    left: 20vw;
   }
 }
 
@@ -83,7 +63,7 @@
     width: 25vw;
     height: 3vw;
     line-height: 3vw;
-    margin-left: 37.5vw;
+    margin-left: 35vw;
     margin-top: 2vw;
     margin-bottom: 0.2vw;
   }
@@ -112,8 +92,27 @@
       transition: 0.2s;
     }
   }
+  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+    width: 27vw;
+    height: 6vw;
+    line-height: 6vw;
+    margin-left: 1vw;
+    margin-right: 0vw;
+    font-size: 0.9rem;
+  }
+  @media all and(min-width: $bkpt-tab) {
+    width: 25vw;
+    height: 6vw;
+    line-height: 6vw;
+    margin-left: 1vw;
+    margin-right: 0vw;
+  }
   .fas {
     padding-right: 1.8rem;
+    @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+      padding-right: 1rem;
+      font-size: 0.9rem;
+    }
   }
   &__number {
     width: 1.5rem;
@@ -128,6 +127,24 @@
     position: absolute;
     left: -2%;
     top: 38%;
+    @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+      left: -6%;
+      top: 30%;
+    }
+    @media all and(min-width: $bkpt-tab) {
+      left: -3.5%;
+    }
+  }
+}
+
+.fonctionnement__liste {
+  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+    display: flex;
+    justify-content: space-around;
+  }
+  @media all and(min-width: $bkpt-tab) {
+    display: flex;
+    justify-content: space-around;
   }
 }
 

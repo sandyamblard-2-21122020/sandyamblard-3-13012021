@@ -23,3 +23,20 @@
     transform: rotate(-35deg);
   }
 }
+
+.footer__contenu {
+  @media all and(min-width: $bkpt-mob) {
+    width: 85vw;
+    margin-left: 5vw;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+h5 {
+  @media all and(min-width: $bkpt-mob) {
+    margin-left: 5vw;
+    font-size: 1.6rem;
+    margin-bottom: 0.5vw;
+  }
+}

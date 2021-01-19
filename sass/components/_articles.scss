@@ -6,24 +6,42 @@
   @include bordradius;
   @include ombre;
   background-color: white;
+  @media all and(min-width: $bkpt-mob) {
+    width: 39vw;
+    height: 30vw;
+    margin-left: 0;
+  }
   &__pict {
     width: 100%;
     height: 50vw;
     border-radius: 20px 20px 0 0;
     background-size: cover;
     background-position: center 70%;
+    @media all and(min-width: $bkpt-mob) {
+      height: 22vw;
+    }
   }
   &__legende {
     margin: 0.5rem;
     padding: 0.3rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     @media all and (max-width: $bkpt-minimob) {
       padding-top: 0;
+    }
+    @media all and (min-width: $bkpt-tab) {
+      margin-top: 0;
+      padding-top: 2vw;
     }
   }
   p {
     margin-top: 0.2rem;
     margin-bottom: 0;
+    @media all and(min-width: $bkpt-tab) {
+      font-size: 1.2rem;
+    }
   }
   .far {
     font-size: 2rem;
@@ -69,4 +87,18 @@
   margin-left: 62vw;
   margin-top: 3vw;
   text-align: center;
+  @media all and(min-width: $bkpt-mob) {
+    width: 12vw;
+    height: 3vw;
+    line-height: 3vw;
+    margin-left: 26vw;
+    margin-top: 1.5vw;
+  }
+}
+
+.article h4 {
+  @media all and(min-width: $bkpt-tab) {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
 }
