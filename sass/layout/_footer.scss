@@ -2,6 +2,9 @@
   background-color: $color-footer;
   padding: 1rem;
   color: #ffffff;
+  @media all and(min-width: $bkpt-mob) {
+    margin-top: 2.5vw;
+  }
   &__textlight {
     font-weight: 100;
   }

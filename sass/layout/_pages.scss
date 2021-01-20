@@ -1,18 +1,54 @@
+$width-menu-item-mob: 90vw;
+$width-menu-item-tab: 50vw;
+$width-menu-item-desk: 30vw;
+$height-menu-item-mob: 20vw;
+$height-menu-item-tab: 12vw;
+$height-menu-item-desk: 7vw;
+
+$dureeanimation-menuitem: 0.4s;
+
 .pages {
   background-color: $color-fond;
 }
 
-.menus {
-  width: 100%;
+.menus__liste {
+  width: 100vw;
   margin: 0;
   padding-top: 0rem;
+  @media all and(min-width: $bkpt-tab) {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 0;
+  }
 }
 
 .entrees div:last-child,
 .plats div:last-child,
 .desserts div:last-child {
   margin-bottom: 9vw;
+  @media all and(min-width: $bkpt-tab) {
+    margin-bottom: 4vw;
+  }
 }
+
+.entrees::before,
+.plats::before,
+.desserts::before {
+  @media all and(min-width: $bkpt-tab) {
+    content: "";
+    display: block;
+    width: 20vw;
+    height: 0.1rem;
+    background-color: $color-tertiary;
+    transform: rotate(90deg) translateX(100%) translateY(6000%);
+    animation: entreeitems;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+  }
+}
+
+/*rajouter modif taille du 
+pseudo-elt pour 4eme plat la note enchantée*/
 
 .titremenus {
   text-transform: uppercase;
@@ -24,13 +60,21 @@
     height: 0.3rem;
     background-color: $color-tertiary;
   }
+  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+    margin-left: 0.5 * (100vw -$width-menu-item-tab);
+  }
+  @media all and(min-width: $bkpt-tab) {
+    margin-bottom: 3vw;
+    margin-top: 0;
+    margin-left: 1vw;
+  }
 }
 
 .menuitem {
-  width: 90vw;
-  height: 20vw;
+  width: $width-menu-item-mob;
+  height: $height-menu-item-mob;
   background-color: white;
-  margin-left: 4.5vw;
+  margin-left: 0.5 * (100vw -$width-menu-item-mob);
   margin-bottom: 4vw;
   @include bordradius;
   @include ombre;
@@ -57,6 +101,18 @@
   &:nth-child(5) {
     animation-delay: 0.24s;
   }
+  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+    width: $width-menu-item-tab;
+    height: $height-menu-item-tab;
+    margin-left: 0.5 * (100vw -$width-menu-item-tab);
+  }
+  @media all and(min-width: $bkpt-tab) {
+    width: $width-menu-item-desk;
+    height: $height-menu-item-desk;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   &__nom {
     width: 85%;
     height: 100%;
@@ -77,6 +133,9 @@
     @media all and (max-width: $bkpt-minimob) {
       font-size: 1rem;
     }
+    @media all and(min-width: $bkpt-tab) and (max-width: 1110px) {
+      font-size: 1.1rem;
+    }
   }
   &__nom p {
     margin-top: 0rem;
@@ -87,6 +146,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
     @media all and (max-width: $bkpt-minimob) {
+      font-size: 0.8rem;
+    }
+    @media all and(min-width: $bkpt-tab) and (max-width: 1110px) {
       font-size: 0.9rem;
     }
   }
@@ -111,20 +173,23 @@
     @include ombre-hover;
     > .menuitem__prix {
       transform: translateX(-14vw);
-      transition: transform 0.5s;
+      transition: transform $dureeanimation-menuitem;
     }
     > .menuitem__nom {
       width: 70%;
-      transition: width 0.5s;
+      transition: width $dureeanimation-menuitem;
+      /*transform: scaleX(0.823);
+      transform-origin: left;
+      transition: transform 0.5s;*/
     }
     > .menuitem__icone {
-      transform: translateX(-14vw);
-      transition: transform 0.5s;
+      transform: translateX(-100%);
+      transition: transform $dureeanimation-menuitem;
       right: -16%;
     }
     > .menuitem__icone > .fa-check-circle {
       transform: rotate(360deg);
-      transition: 0.5s;
+      transition: $dureeanimation-menuitem;
     }
   }
 }
@@ -138,7 +203,7 @@
   overflow: hidden;
   border-radius: 0 20px 20px 0;
   float: right;
-  transform: translateX(14vw);
+  transform: translateX(100%);
   position: absolute;
   right: 0;
   display: flex;

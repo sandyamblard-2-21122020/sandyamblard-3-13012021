@@ -1,6 +1,28 @@
 $bkpt-minimob: 370px;
 $bkpt-mob: 768px;
 $bkpt-tab: 1024px;
+
+$width-bouton-arrondi-mob: 60vw;
+$width-bouton-arrondi-tab: 35vw;
+$width-bouton-arrondi-desk: 25vw;
+$height-bouton-arrondi-mob: 12vw;
+$height-bouton-arrondi-tab: 5vw;
+$height-bouton-arrondi-desk: 4vw;
+
+$width-etape-mob: 90vw;
+$width-etape-tab: 27vw;
+$width-etape-desk: 29vw;
+$height-etape-mob: 18vw;
+$height-etape-tab: 6vw;
+$height-etape-desk: 6vw;
+
+$width-presentation-tab: 95vw;
+$width-presentation-desk: 80vw;
+
+$width-listeresto-mob: 100vw;
+$width-listeresto-tab: 95vw;
+/*$width-listeresto-deskbig: 85vw;*/
+
 /*$media-mini: all and
   (
     max-width: $bkpt-minimob,

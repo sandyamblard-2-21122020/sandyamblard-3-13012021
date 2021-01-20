@@ -22,27 +22,30 @@
   }
   @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
     padding-bottom: 0.1vw;
-    width: 95vw;
-    margin-left: 2.5vw;
+    width: $width-presentation-tab;
+    margin-left: 0.5 * (100-$width-presentation-tab);
     margin-top: 1vw;
     @include bordradius;
   }
   @media all and(min-width: $bkpt-tab) {
     padding-bottom: 1vw;
-    width: 95vw;
-    margin-left: 2.55vw;
+    width: $width-presentation-desk;
+    margin-left: 0.5 * (100-$width-presentation-desk);
     margin-top: 1vw;
     @include bordradius;
   }
 }
 
-/*.presentation {
+.fonctionnement__liste {
+  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+    display: flex;
+    justify-content: space-around;
+  }
   @media all and(min-width: $bkpt-tab) {
     display: flex;
     justify-content: space-around;
-    align-items: center;
   }
-}*/
+}
 
 .listeresto {
   background-color: $color-fond;
@@ -50,9 +53,8 @@
   padding-bottom: 3.5vw;
   padding-top: 1vw;
   @media all and(min-width: $bkpt-mob) {
-    width: 95vw;
-    margin-left: 2.5vw;
-    margin-bottom: 3vw;
+    width: $width-listeresto-tab;
+    margin-left: 0.5 * (100-$width-listeresto-tab);
     @include bordradius;
   }
   a {

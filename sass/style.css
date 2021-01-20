@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @-webkit-keyframes entreeitems {
   0% {
     -webkit-transform: translateY(4vh);
@@ -20,7 +21,6 @@
     opacity: 1;
   }
 }
-
 @keyframes entreeitems {
   0% {
     -webkit-transform: translateY(4vh);
@@ -91,6 +91,7 @@ h5 {
   margin-top: 0;
 }
 
+/*$width-listeresto-deskbig: 85vw;*/
 /*$media-mini: all and
   (
     max-width: $bkpt-minimob,
@@ -121,19 +122,18 @@ $media-desk: all and
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .header {
     height: 5vw;
-    padding-top: 0.5vw;
+    padding-top: 0.3vw;
     position: fixed;
-    margin-top: -0.4vw;
   }
 }
 
 @media all and (min-width: 1024px) {
   .header {
-    height: 5vw;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
+    height: 3vw;
+    padding-top: 0.6vw;
+    padding-bottom: 0vw;
     position: fixed;
-    margin-top: -1vw;
+    margin-top: 0vw;
   }
 }
 
@@ -148,7 +148,6 @@ $media-desk: all and
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .header__logo {
     width: 15vw;
-    /*margin-top: 1.1vw;*/
     margin-left: 42.5vw;
   }
 }
@@ -156,7 +155,7 @@ $media-desk: all and
 @media all and (min-width: 1024px) {
   .header__logo {
     width: 11vw;
-    /*margin-top: 0vw;*/
+    margin-top: 0vw;
     margin-left: 45.5vw;
   }
 }
@@ -177,19 +176,19 @@ $media-desk: all and
 
 @media all and (min-width: 1024px) {
   .header .fa-arrow-left {
-    line-height: 4vw;
+    line-height: 2.1vw;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
   main {
-    padding-top: 5vw;
+    padding-top: 5.8vw;
   }
 }
 
 @media all and (min-width: 1024px) {
   main {
-    padding-top: 4.5vw;
+    padding-top: 3vw;
   }
 }
 
@@ -197,6 +196,12 @@ $media-desk: all and
   background-color: #353535;
   padding: 1rem;
   color: #ffffff;
+}
+
+@media all and (min-width: 768px) {
+  .footer {
+    margin-top: 2.5vw;
+  }
 }
 
 .footer__textlight {
@@ -288,20 +293,33 @@ $media-desk: all and
 @media all and (min-width: 1024px) {
   .presentation {
     padding-bottom: 1vw;
-    width: 95vw;
-    margin-left: 2.55vw;
+    width: 80vw;
+    margin-left: 10vw;
     margin-top: 1vw;
     border-radius: 20px;
   }
 }
 
-/*.presentation {
-  @media all and(min-width: $bkpt-tab) {
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .fonctionnement__liste {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
-}*/
+}
+
+@media all and (min-width: 1024px) {
+  .fonctionnement__liste {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .listeresto {
   background-color: #f6f6f6;
   width: 100%;
@@ -313,7 +331,6 @@ $media-desk: all and
   .listeresto {
     width: 95vw;
     margin-left: 2.5vw;
-    margin-bottom: 3vw;
     border-radius: 20px;
   }
 }
@@ -496,10 +513,21 @@ $media-desk: all and
   background-color: #f6f6f6;
 }
 
-.menus {
-  width: 100%;
+.menus__liste {
+  width: 100vw;
   margin: 0;
   padding-top: 0rem;
+}
+
+@media all and (min-width: 1024px) {
+  .menus__liste {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-bottom: 0;
+  }
 }
 
 .entrees div:last-child,
@@ -508,6 +536,36 @@ $media-desk: all and
   margin-bottom: 9vw;
 }
 
+@media all and (min-width: 1024px) {
+  .entrees div:last-child,
+  .plats div:last-child,
+  .desserts div:last-child {
+    margin-bottom: 4vw;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .entrees::before,
+  .plats::before,
+  .desserts::before {
+    content: "";
+    display: block;
+    width: 20vw;
+    height: 0.1rem;
+    background-color: #99e2d0;
+    -webkit-transform: rotate(90deg) translateX(100%) translateY(6000%);
+            transform: rotate(90deg) translateX(100%) translateY(6000%);
+    -webkit-animation: entreeitems;
+            animation: entreeitems;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+  }
+}
+
+/*rajouter modif taille du 
+pseudo-elt pour 4eme plat la note enchantée*/
 .titremenus {
   text-transform: uppercase;
   font-weight: 400;
@@ -521,11 +579,25 @@ $media-desk: all and
   background-color: #99e2d0;
 }
 
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .titremenus {
+    margin-left: 25vw;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .titremenus {
+    margin-bottom: 3vw;
+    margin-top: 0;
+    margin-left: 1vw;
+  }
+}
+
 .menuitem {
   width: 90vw;
   height: 20vw;
   background-color: white;
-  margin-left: 4.5vw;
+  margin-left: 5vw;
   margin-bottom: 4vw;
   border-radius: 20px;
   -webkit-box-shadow: 1px 1px 18px #e4e3e3;
@@ -570,6 +642,23 @@ $media-desk: all and
           animation-delay: 0.24s;
 }
 
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .menuitem {
+    width: 50vw;
+    height: 12vw;
+    margin-left: 25vw;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .menuitem {
+    width: 30vw;
+    height: 7vw;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .menuitem__nom {
   width: 85%;
   height: 100%;
@@ -602,6 +691,12 @@ $media-desk: all and
   }
 }
 
+@media all and (min-width: 1024px) and (max-width: 1110px) {
+  .menuitem__nom h4 {
+    font-size: 1.1rem;
+  }
+}
+
 .menuitem__nom p {
   margin-top: 0rem;
   margin-bottom: 0rem;
@@ -613,6 +708,12 @@ $media-desk: all and
 }
 
 @media all and (max-width: 370px) {
+  .menuitem__nom p {
+    font-size: 0.8rem;
+  }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1110px) {
   .menuitem__nom p {
     font-size: 0.9rem;
   }
@@ -658,33 +759,36 @@ $media-desk: all and
 .menuitem:hover > .menuitem__prix {
   -webkit-transform: translateX(-14vw);
           transform: translateX(-14vw);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 .menuitem:hover > .menuitem__nom {
   width: 70%;
-  -webkit-transition: width 0.5s;
-  transition: width 0.5s;
+  -webkit-transition: width 0.4s;
+  transition: width 0.4s;
+  /*transform: scaleX(0.823);
+      transform-origin: left;
+      transition: transform 0.5s;*/
 }
 
 .menuitem:hover > .menuitem__icone {
-  -webkit-transform: translateX(-14vw);
-          transform: translateX(-14vw);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
   right: -16%;
 }
 
 .menuitem:hover > .menuitem__icone > .fa-check-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .menuitem__icone {
@@ -696,8 +800,8 @@ $media-desk: all and
   overflow: hidden;
   border-radius: 0 20px 20px 0;
   float: right;
-  -webkit-transform: translateX(14vw);
-          transform: translateX(14vw);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
   position: absolute;
   right: 0;
   display: -webkit-box;
@@ -814,11 +918,17 @@ $media-desk: all and
 @media all and (min-width: 1024px) {
   .bouton--arrondi {
     width: 25vw;
-    height: 3vw;
-    line-height: 3vw;
-    margin-left: 35vw;
+    height: 4vw;
+    line-height: 4vw;
+    margin-left: 37.5vw;
     margin-top: 2vw;
     margin-bottom: 0.2vw;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .presentation .bouton--arrondi {
+    margin-left: 27.5vw;
   }
 }
 
@@ -828,7 +938,6 @@ $media-desk: all and
   height: 18vw;
   margin-left: 5vw;
   margin-bottom: 5vw;
-  /*padding-top: 7.4vw;*/
   line-height: 18vw;
   font-weight: 600;
   text-align: center;
@@ -869,7 +978,7 @@ $media-desk: all and
 
 @media all and (min-width: 1024px) {
   .etape {
-    width: 25vw;
+    width: 29vw;
     height: 6vw;
     line-height: 6vw;
     margin-left: 1vw;
@@ -913,26 +1022,6 @@ $media-desk: all and
 @media all and (min-width: 1024px) {
   .etape__number {
     left: -3.5%;
-  }
-}
-
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  .fonctionnement__liste {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-
-@media all and (min-width: 1024px) {
-  .fonctionnement__liste {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
   }
 }
 
