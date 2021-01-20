@@ -67,11 +67,20 @@
     margin-top: 2vw;
     margin-bottom: 0.2vw;
   }
+  @media all and(min-width: 2100px) {
+    width: $width-bouton-arrondi-4k;
+    height: $height-bouton-arrondi-4k;
+    line-height: $height-bouton-arrondi-4k;
+    margin-top: 1vw;
+  }
 }
 
 .presentation .bouton--arrondi {
   @media all and(min-width: $bkpt-tab) {
-    margin-left: 27.5vw;
+    margin-left: 0.5 * ($width-presentation-desk - $width-bouton-arrondi-desk);
+  }
+  @media all and(min-width: 2100px) {
+    margin-left: 0.5 * ($width-presentation-desk - $width-bouton-arrondi-4k);
   }
 }
 
@@ -111,6 +120,12 @@
     line-height: $height-etape-desk;
     margin-left: 1vw;
     margin-right: 0vw;
+    border-radius: 30px;
+  }
+  @media all and(min-width: 2100px) {
+    width: $width-etape-4k;
+    height: $height-etape-4k;
+    line-height: $height-etape-4k;
   }
   .fas {
     padding-right: 1.8rem;
@@ -138,6 +153,9 @@
     }
     @media all and(min-width: $bkpt-tab) {
       left: -3.5%;
+    }
+    @media all and(min-width: 2100px) {
+      left: -2.5%;
     }
   }
 }

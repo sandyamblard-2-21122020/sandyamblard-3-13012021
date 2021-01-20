@@ -7,9 +7,8 @@ $color-footer: #353535;
 $font-logo: "Shrikhand", cursive;
 $font-texte: "Roboto", sans-serif;
 
-$height-header-mob: 18vw;
-$height-header-tab: 5vw;
-$height-header-desk: 3vw;
+$dureeanimation-menuitem: 0.4s;
+$delai-anim-entree-menuitem: 0.08s;
 
 $restaurants: lapalettedugout, lanoteenchantee, alafrancaise, ledelicedessens;
 
@@ -41,6 +40,18 @@ $restaurants: lapalettedugout, lanoteenchantee, alafrancaise, ledelicedessens;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes apparitionfondu {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
     opacity: 1;
   }
 }

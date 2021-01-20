@@ -19,9 +19,11 @@
             <form class="form--ville" method="post" action="#"><input class="saisieville" type="text" name="ville" value="Paris, Belleville"><i class="fas fa-map-marker-alt"></i></form>
             <h2 class="slogan">Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <div class="bouton--arrondi">
+            <a href="#listerestos">
+                <div class="bouton--arrondi">
                 Explorer nos restaurants
-            </div>
+                </div>
+            </a>    
         </section>
         <section class="fonctionnement">
             <h3>Fonctionnement</h3>
@@ -31,7 +33,7 @@
                 <div class="etape"><span class="etape__number">3</span><i class="fas fa-store"></i>Dégustez au restaurant</div>
             </div>
         </section>
-        <section class="listeresto">
+        <section class="listeresto" id="listerestos">
             <h3>Restaurants</h3>
             <div class="listeresto__liste">
                 <a href="lapalettedugout.html">
@@ -84,14 +86,14 @@
     <footer class="footer">
         <h5>ohmyfood</h5>
         <div class="footer__contenu">
-            <div class="footer__contenu--resto">
+            <nav class="footer__contenu--resto">
                 <p><i class="fas fa-utensils"></i>Proposer son restaurant</p>
                 <p><i class="fas fa-handshake"></i>Devenir partenaire</p>
-            </div>
-            <div class="footer__contenu--mentions">
+            </nav>
+            <nav class="footer__contenu--mentions">
                 <p class="footer__textlight">Mentions légales</p>
                 <p class="footer__textlight"><a href="mailto:contact@ohmyfood.com">Contact</a></p>
-            </div>
+            </nav>
             
         </div>
     </footer>

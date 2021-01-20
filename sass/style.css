@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @-webkit-keyframes entreeitems {
   0% {
     -webkit-transform: translateY(4vh);
@@ -21,6 +20,7 @@
     opacity: 1;
   }
 }
+
 @keyframes entreeitems {
   0% {
     -webkit-transform: translateY(4vh);
@@ -40,6 +40,30 @@
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes apparitionfondu {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes apparitionfondu {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
     opacity: 1;
   }
 }
@@ -91,23 +115,6 @@ h5 {
   margin-top: 0;
 }
 
-/*$width-listeresto-deskbig: 85vw;*/
-/*$media-mini: all and
-  (
-    max-width: $bkpt-minimob,
-  );
-$media-tab: all and
-  (
-    min-width: $bkpt-mob,
-  )
-  and
-  (
-    max-width: $bkpt-tab,
-  );
-$media-desk: all and
-  (
-    min-width: $bkpt-tab,
-  );*/
 .header {
   width: 100%;
   background-color: white;
@@ -156,7 +163,7 @@ $media-desk: all and
   .header__logo {
     width: 11vw;
     margin-top: 0vw;
-    margin-left: 45.5vw;
+    margin-left: 44.5vw;
   }
 }
 
@@ -253,6 +260,11 @@ $media-desk: all and
   background-color: #f6f6f6;
   margin-top: 4px;
   padding-bottom: 3.5vw;
+}
+
+.presentation a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .presentation p {
@@ -500,7 +512,7 @@ $media-desk: all and
 
 @media all and (min-width: 1024px) {
   .restotitre {
-    margin-top: -3vw;
+    margin-top: -2.7vw;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     border-radius: 75px 75px 0 0;
@@ -514,7 +526,7 @@ $media-desk: all and
 }
 
 .menus__liste {
-  width: 100vw;
+  width: 100%;
   margin: 0;
   padding-top: 0rem;
 }
@@ -555,8 +567,8 @@ $media-desk: all and
     background-color: #99e2d0;
     -webkit-transform: rotate(90deg) translateX(100%) translateY(6000%);
             transform: rotate(90deg) translateX(100%) translateY(6000%);
-    -webkit-animation: entreeitems;
-            animation: entreeitems;
+    -webkit-animation: apparitionfondu;
+            animation: apparitionfondu;
     -webkit-animation-duration: 0.5s;
             animation-duration: 0.5s;
     -webkit-animation-timing-function: ease;
@@ -564,8 +576,24 @@ $media-desk: all and
   }
 }
 
-/*rajouter modif taille du 
-pseudo-elt pour 4eme plat la note enchantée*/
+@media all and (min-width: 1024px) {
+  .entree--noteenchantee::before {
+    content: "";
+    display: block;
+    width: 30vw;
+    height: 0.1rem;
+    background-color: #99e2d0;
+    -webkit-transform: rotate(90deg) translateX(80%) translateY(9800%);
+            transform: rotate(90deg) translateX(80%) translateY(9800%);
+    -webkit-animation: apparitionfondu;
+            animation: apparitionfondu;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+  }
+}
+
 .titremenus {
   text-transform: uppercase;
   font-weight: 400;
@@ -926,9 +954,24 @@ pseudo-elt pour 4eme plat la note enchantée*/
   }
 }
 
+@media all and (min-width: 2100px) {
+  .bouton--arrondi {
+    width: 17vw;
+    height: 2.5vw;
+    line-height: 2.5vw;
+    margin-top: 1vw;
+  }
+}
+
 @media all and (min-width: 1024px) {
   .presentation .bouton--arrondi {
     margin-left: 27.5vw;
+  }
+}
+
+@media all and (min-width: 2100px) {
+  .presentation .bouton--arrondi {
+    margin-left: 31.5vw;
   }
 }
 
@@ -978,11 +1021,20 @@ pseudo-elt pour 4eme plat la note enchantée*/
 
 @media all and (min-width: 1024px) {
   .etape {
-    width: 29vw;
-    height: 6vw;
-    line-height: 6vw;
+    width: 24vw;
+    height: 5vw;
+    line-height: 5vw;
     margin-left: 1vw;
     margin-right: 0vw;
+    border-radius: 30px;
+  }
+}
+
+@media all and (min-width: 2100px) {
+  .etape {
+    width: 18vw;
+    height: 3vw;
+    line-height: 3vw;
   }
 }
 
@@ -1022,6 +1074,12 @@ pseudo-elt pour 4eme plat la note enchantée*/
 @media all and (min-width: 1024px) {
   .etape__number {
     left: -3.5%;
+  }
+}
+
+@media all and (min-width: 2100px) {
+  .etape__number {
+    left: -2.5%;
   }
 }
 
@@ -1177,6 +1235,7 @@ button {
   -webkit-box-shadow: 1px 1px 18px #e4e3e3;
           box-shadow: 1px 1px 18px #e4e3e3;
   background-color: white;
+  position: relative;
 }
 
 @media all and (min-width: 768px) {
@@ -1189,7 +1248,7 @@ button {
 
 .article__pict {
   width: 100%;
-  height: 50vw;
+  height: 76%;
   border-radius: 20px 20px 0 0;
   background-size: cover;
   background-position: center 70%;
@@ -1197,7 +1256,7 @@ button {
 
 @media all and (min-width: 768px) {
   .article__pict {
-    height: 22vw;
+    height: 73%;
   }
 }
 
@@ -1219,14 +1278,14 @@ button {
 
 @media all and (max-width: 370px) {
   .article__legende {
-    padding-top: 0;
+    padding-top: 0.9vw;
   }
 }
 
 @media all and (min-width: 1024px) {
   .article__legende {
     margin-top: 0;
-    padding-top: 2vw;
+    padding-top: 1.5vw;
   }
 }
 
@@ -1255,11 +1314,11 @@ button {
 }
 
 .article .fas {
-  font-size: 2rem;
+  font-size: 2.1rem;
   color: #9356dc;
   opacity: 0;
   position: absolute;
-  right: 5%;
+  right: 4.9%;
   bottom: 15%;
 }
 
@@ -1291,21 +1350,20 @@ button {
   color: #1b6150;
   font-weight: 600;
   background-color: #99e2d0;
-  width: 25vw;
-  height: 6vw;
-  line-height: 6vw;
-  margin-left: 62vw;
-  margin-top: 3vw;
+  width: 24.3vw;
+  height: 5.85vw;
+  line-height: 5.85vw;
+  position: absolute;
+  right: 5%;
+  top: 5%;
   text-align: center;
 }
 
 @media all and (min-width: 768px) {
   .nouveau {
-    width: 12vw;
-    height: 3vw;
-    line-height: 3vw;
-    margin-left: 26vw;
-    margin-top: 1.5vw;
+    width: 10.53vw;
+    height: 2.7vw;
+    line-height: 2.7vw;
   }
 }
 

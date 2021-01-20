@@ -1,18 +1,9 @@
-$width-menu-item-mob: 90vw;
-$width-menu-item-tab: 50vw;
-$width-menu-item-desk: 30vw;
-$height-menu-item-mob: 20vw;
-$height-menu-item-tab: 12vw;
-$height-menu-item-desk: 7vw;
-
-$dureeanimation-menuitem: 0.4s;
-
 .pages {
   background-color: $color-fond;
 }
 
 .menus__liste {
-  width: 100vw;
+  width: 100%;
   margin: 0;
   padding-top: 0rem;
   @media all and(min-width: $bkpt-tab) {
@@ -41,14 +32,25 @@ $dureeanimation-menuitem: 0.4s;
     height: 0.1rem;
     background-color: $color-tertiary;
     transform: rotate(90deg) translateX(100%) translateY(6000%);
-    animation: entreeitems;
+    animation: apparitionfondu;
     animation-duration: 0.5s;
     animation-timing-function: ease;
   }
 }
 
-/*rajouter modif taille du 
-pseudo-elt pour 4eme plat la note enchantée*/
+.entree--noteenchantee::before {
+  @media all and(min-width: $bkpt-tab) {
+    content: "";
+    display: block;
+    width: 30vw;
+    height: 0.1rem;
+    background-color: $color-tertiary;
+    transform: rotate(90deg) translateX(80%) translateY(9800%);
+    animation: apparitionfondu;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+  }
+}
 
 .titremenus {
   text-transform: uppercase;
@@ -93,13 +95,13 @@ pseudo-elt pour 4eme plat la note enchantée*/
     animation-delay: 0s;
   }
   &:nth-child(3) {
-    animation-delay: 0.08s;
+    animation-delay: $delai-anim-entree-menuitem;
   }
   &:nth-child(4) {
-    animation-delay: 0.16s;
+    animation-delay: 2 * $delai-anim-entree-menuitem;
   }
   &:nth-child(5) {
-    animation-delay: 0.24s;
+    animation-delay: 3 * $delai-anim-entree-menuitem;
   }
   @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
     width: $width-menu-item-tab;

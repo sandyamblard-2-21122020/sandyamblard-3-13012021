@@ -3,6 +3,10 @@
   background-color: $color-fond;
   margin-top: 4px;
   padding-bottom: 3.5vw;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
   p {
     text-align: center;
     padding: 0 1rem;
@@ -131,7 +135,7 @@ h1 {
     margin-left: 12.5vw;
   }
   @media all and(min-width: $bkpt-tab) {
-    margin-top: -3vw;
+    margin-top: -2.7vw;
     justify-content: space-around;
     border-radius: 75px 75px 0 0;
     width: 75vw;
