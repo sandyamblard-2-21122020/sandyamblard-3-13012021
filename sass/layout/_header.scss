@@ -19,14 +19,14 @@
     margin-top: 0vw;
   }
   &__logo {
-    width: 60vw;
+    width: 55vw;
     margin-left: 20vw;
     margin-bottom: 1vw;
     margin-top: 1vw;
     position: relative;
     @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
       width: 15vw;
-      margin-left: 42.5vw;
+      margin-left: 40vw;
     }
     @media all and(min-width: $bkpt-tab) {
       width: 11vw;
@@ -42,9 +42,13 @@
     font-size: 1.4rem;
     @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
       line-height: $height-header-tab;
+      padding-right: 3rem;
+      padding-left: 3rem;
     }
     @media all and(min-width: $bkpt-tab) {
       line-height: $height-header-desk - 0.9vw;
+      padding-right: 3rem;
+      padding-left: 3rem;
     }
   }
 }

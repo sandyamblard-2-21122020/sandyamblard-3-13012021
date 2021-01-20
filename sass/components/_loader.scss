@@ -10,6 +10,10 @@
   animation: disparitionloader 0.5s ease-in-out 3s both;
 }
 
+.loader__bloc--test {
+  animation: none;
+}
+
 .loader__title {
   font-family: $font-logo;
   font-size: 2.5rem;
@@ -28,7 +32,7 @@
   border: 0.5rem rgba($color-tertiary, 0.6) dotted;
   display: inline-block;
   line-height: 100vh;
-  animation: tour 3s linear 0s infinite;
+  animation: tour 3s linear 0s 2;
   position: relative;
   &::before {
     content: "";
