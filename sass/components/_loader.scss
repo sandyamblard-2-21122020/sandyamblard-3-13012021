@@ -1,11 +1,13 @@
 .loader__bloc {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: rgba($color-primary, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  cursor: wait;
+  animation: disparitionloader 0.5s ease-in-out 3s both;
 }
 
 .loader__title {
@@ -40,7 +42,7 @@
     right: 1rem;
     left: 1rem;
     bottom: 1rem;
-    animation: tour 1.5s linear 0s infinite reverse;
+    animation: tour 1.5s linear 0s 2 reverse;
   }
 }
 
@@ -51,14 +53,8 @@
   text-align: center;
   line-height: 100vh;
   font-size: 2.5rem;
-  /*animation-name: pendule;
-  animation-duration: 0.5s;
-  animation-timing-function: cubic-bezier(0.04, 0.66, 1, 0.43);
-  animation-delay: 0;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-fill-mode: both;*/
-  animation: tour 8s linear 0s infinite;
+
+  animation: tour 8s linear 0s 1;
   position: absolute;
   top: 35%;
 }
@@ -71,6 +67,13 @@
     transform: rotate(-50deg);
   }
 }*/
+/*animation-name: pendule;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.04, 0.66, 1, 0.43);
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;*/
 
 @keyframes tour {
   0% {
@@ -80,3 +83,30 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes disparitionloader {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0%;
+    transform: scale(0) translateX(100%);
+    transform-origin: top left;
+    height: 0;
+  }
+}
+
+/*@keyframes apparitionlorem {
+  0% {
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}*/
+
+/*.header--test,
+.main--test,
+.footer--test {
+  animation: apparitionlorem 0.5s ease-in-out 3s both;
+}*/
