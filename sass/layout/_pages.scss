@@ -6,7 +6,7 @@
   width: 100%;
   margin: 0;
   padding-top: 0rem;
-  @media all and(min-width: $bkpt-tab) {
+  @include desk-version {
     display: flex;
     justify-content: space-around;
     padding-bottom: 0;
@@ -17,7 +17,7 @@
 .plats div:last-child,
 .desserts div:last-child {
   margin-bottom: 9vw;
-  @media all and(min-width: $bkpt-tab) {
+  @include desk-version {
     margin-bottom: 4vw;
   }
 }
@@ -25,7 +25,7 @@
 .entrees::before,
 .plats::before,
 .desserts::before {
-  @media all and(min-width: $bkpt-tab) {
+  @include desk-version {
     content: "";
     display: block;
     width: 20vw;
@@ -33,13 +33,12 @@
     background-color: $color-tertiary;
     transform: rotate(90deg) translateX(100%) translateY(6000%);
     animation: apparitionfondu;
-    animation-duration: 0.5s;
-    animation-timing-function: ease;
+    animation-duration: $dureeanimation-menuitem + 0.2s;
   }
 }
 
 .entree--noteenchantee::before {
-  @media all and(min-width: $bkpt-tab) {
+  @include desk-version {
     content: "";
     display: block;
     width: 30vw;
@@ -47,14 +46,17 @@
     background-color: $color-tertiary;
     transform: rotate(90deg) translateX(80%) translateY(9800%);
     animation: apparitionfondu;
-    animation-duration: 0.5s;
-    animation-timing-function: ease;
+    animation-duration: $dureeanimation-menuitem + 0.2s;
   }
 }
 
 .titremenus {
   text-transform: uppercase;
   font-weight: 400;
+  animation-name: entreeitems;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
   &::after {
     content: "";
     display: block;
@@ -62,10 +64,10 @@
     height: 0.3rem;
     background-color: $color-tertiary;
   }
-  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+  @include tab-version {
     margin-left: 0.5 * (100vw -$width-menu-item-tab);
   }
-  @media all and(min-width: $bkpt-tab) {
+  @include desk-version {
     margin-bottom: 3vw;
     margin-top: 0;
     margin-left: 1vw;
@@ -84,31 +86,19 @@
   position: relative;
   animation-name: entreeitems;
   animation-duration: 0.4s;
-  animation-timing-function: linear;
-  /*animation-delay: 0;*/
   animation-iteration-count: 1;
   animation-fill-mode: both;
-  &:first-child {
-    animation-delay: 0s;
+  @for $i from 2 through $nb-menuitems {
+    &:nth-child(#{$i}) {
+      animation-delay: ($i) * $delai-anim-entree-menuitem;
+    }
   }
-  &:nth-child(2) {
-    animation-delay: 0s;
-  }
-  &:nth-child(3) {
-    animation-delay: $delai-anim-entree-menuitem;
-  }
-  &:nth-child(4) {
-    animation-delay: 2 * $delai-anim-entree-menuitem;
-  }
-  &:nth-child(5) {
-    animation-delay: 3 * $delai-anim-entree-menuitem;
-  }
-  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+  @include tab-version {
     width: $width-menu-item-tab;
     height: $height-menu-item-tab;
     margin-left: 0.5 * (100vw -$width-menu-item-tab);
   }
-  @media all and(min-width: $bkpt-tab) {
+  @include desk-version {
     width: $width-menu-item-desk;
     height: $height-menu-item-desk;
     margin-left: 0;
@@ -170,7 +160,7 @@
     @media all and (max-width: $bkpt-minimob) {
       font-size: 1rem;
     }
-    @media all and(min-width: $bkpt-mob) /*and (max-width: $bkpt-tab) */ {
+    @include desk-and-tab-version {
       padding-left: 0rem;
       padding-right: 0rem;
       padding-bottom: 0.15 * $height-menu-item-tab;

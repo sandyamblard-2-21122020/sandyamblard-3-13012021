@@ -44,3 +44,21 @@ $width-menu-item-desk: 30vw;
 $height-menu-item-mob: 20vw;
 $height-menu-item-tab: 12vw;
 $height-menu-item-desk: 7vw;
+
+@mixin tab-version {
+  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+    @content;
+  }
+}
+
+@mixin desk-and-tab-version {
+  @media all and(min-width: $bkpt-mob) {
+    @content;
+  }
+}
+
+@mixin desk-version {
+  @media all and(min-width: $bkpt-tab) {
+    @content;
+  }
+}

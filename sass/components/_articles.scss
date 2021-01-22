@@ -7,7 +7,7 @@
   @include ombre;
   background-color: white;
   position: relative;
-  @media all and(min-width: $bkpt-mob) {
+  @include desk-and-tab-version {
     width: $width-article-tab;
     height: $height-article-tab;
     margin-left: 0;
@@ -18,7 +18,7 @@
     border-radius: 20px 20px 0 0;
     background-size: cover;
     background-position: center 70%;
-    @media all and(min-width: $bkpt-mob) {
+    @include desk-and-tab-version {
       height: 73%;
     }
   }
@@ -32,7 +32,7 @@
     @media all and (max-width: $bkpt-minimob) {
       padding-top: 0.03 * $height-article-tab;
     }
-    @media all and (min-width: $bkpt-tab) {
+    @include desk-version {
       margin-top: 0;
       padding-top: 0.05 * $height-article-tab;
     }
@@ -40,7 +40,7 @@
   p {
     margin-top: 0.2rem;
     margin-bottom: 0;
-    @media all and(min-width: $bkpt-tab) {
+    @include desk-version {
       font-size: 1.2rem;
     }
   }
@@ -89,7 +89,7 @@
   right: 5%;
   top: 5%;
   text-align: center;
-  @media all and (min-width: $bkpt-mob) {
+  @include desk-and-tab-version {
     width: 0.27 * $width-article-tab;
     height: 0.09 * $height-article-tab;
     line-height: 0.09 * $height-article-tab;
@@ -97,7 +97,7 @@
 }
 
 .article h4 {
-  @media all and(min-width: $bkpt-tab) {
+  @include desk-version {
     font-size: 1.4rem;
     margin-bottom: 0.8rem;
   }

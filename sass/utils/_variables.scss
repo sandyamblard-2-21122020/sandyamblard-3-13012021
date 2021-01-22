@@ -8,7 +8,8 @@ $font-logo: "Shrikhand", cursive;
 $font-texte: "Roboto", sans-serif;
 
 $dureeanimation-menuitem: 0.4s;
-$delai-anim-entree-menuitem: 0.08s;
+$nb-menuitems: 5;
+$delai-anim-entree-menuitem: $dureeanimation-menuitem / $nb-menuitems;
 
 $restaurants: lapalettedugout, lanoteenchantee, alafrancaise, ledelicedessens;
 
@@ -29,27 +30,33 @@ $restaurants: lapalettedugout, lanoteenchantee, alafrancaise, ledelicedessens;
   0% {
     transform: translateY(4vh);
     opacity: 0;
+    animation-timing-function: ease-in;
   }
   50% {
     transform: translateY(2vh);
     opacity: 0.3;
+    animation-timing-function: linear;
   }
   75% {
     transform: translateY(1vh);
     opacity: 0.5;
+    animation-timing-function: ease-out;
   }
   100% {
     transform: translateY(0);
     opacity: 1;
+    animation-timing-function: ease-out;
   }
 }
 
 @keyframes apparitionfondu {
   0% {
     opacity: 0;
+    animation-timing-function: ease-in;
   }
   90% {
     opacity: 0.2;
+    animation-timing-function: ease-out;
   }
   100% {
     opacity: 1;

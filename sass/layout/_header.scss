@@ -6,12 +6,12 @@
   border-bottom: 1px #efefef solid;
   box-shadow: 0 4px 4px rgba(163, 162, 162, 0.5);
   z-index: 2;
-  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+  @include tab-version {
     height: $height-header-tab;
     padding-top: 0.3vw;
     position: fixed;
   }
-  @media all and(min-width: $bkpt-tab) {
+  @include desk-version {
     height: $height-header-desk;
     padding-top: 0.6vw;
     padding-bottom: 0vw;
@@ -24,11 +24,11 @@
     margin-bottom: 1vw;
     margin-top: 1vw;
     position: relative;
-    @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+    @include tab-version {
       width: 15vw;
       margin-left: 42.5vw;
     }
-    @media all and(min-width: $bkpt-tab) {
+    @include desk-version {
       width: 11vw;
       margin-top: 0vw;
       margin-left: 44.5vw;
@@ -40,12 +40,12 @@
     left: 5%;
     line-height: $height-header-mob - 5vw;
     font-size: 1.4rem;
-    @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+    @include tab-version {
       line-height: $height-header-tab;
       padding-right: 3rem;
       padding-left: 3rem;
     }
-    @media all and(min-width: $bkpt-tab) {
+    @include desk-version {
       line-height: $height-header-desk - 0.9vw;
       padding-right: 3rem;
       padding-left: 3rem;
@@ -53,10 +53,10 @@
   }
 }
 main {
-  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+  @include tab-version {
     padding-top: $height-header-tab + 0.8vw;
   }
-  @media all and(min-width: $bkpt-tab) {
+  @include desk-version {
     padding-top: $height-header-desk;
   }
 }

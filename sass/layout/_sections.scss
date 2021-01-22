@@ -12,26 +12,26 @@
     padding: 0 1rem;
     margin-top: 0px;
     font-size: 1.1rem;
-    @media all and(min-width: $bkpt-tab) {
+    @include desk-version {
       font-size: 1rem;
     }
   }
   h2 {
-    @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+    @include tab-version {
       font-size: 1.5rem;
     }
-    @media all and(min-width: $bkpt-tab) {
+    @include desk-version {
       font-size: 1.5rem;
     }
   }
-  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+  @include tab-version {
     padding-bottom: 0.1vw;
     width: $width-presentation-tab;
     margin-left: 0.5 * (100-$width-presentation-tab);
     margin-top: 1vw;
     @include bordradius;
   }
-  @media all and(min-width: $bkpt-tab) {
+  @include desk-version {
     padding-bottom: 1vw;
     width: $width-presentation-desk;
     margin-left: 0.5 * (100-$width-presentation-desk);
@@ -41,11 +41,11 @@
 }
 
 .fonctionnement__liste {
-  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+  @include tab-version {
     display: flex;
     justify-content: space-around;
   }
-  @media all and(min-width: $bkpt-tab) {
+  @include desk-version {
     display: flex;
     justify-content: space-around;
   }
@@ -56,7 +56,7 @@
   width: 100%;
   padding-bottom: 3.5vw;
   padding-top: 1vw;
-  @media all and(min-width: $bkpt-mob) {
+  @include desk-and-tab-version {
     width: $width-listeresto-tab;
     margin-left: 0.5 * (100-$width-listeresto-tab);
     @include bordradius;
@@ -67,20 +67,19 @@
     &:active > .article,
     &:hover > .article {
       @include ombre-hover;
-      /*transition: 1s;*/
     }
   }
 }
 
 .listeresto h3 {
-  @media all and(min-width: $bkpt-mob) {
+  @include desk-and-tab-version {
     margin-left: 1.5vw;
     margin-top: 1vw;
   }
 }
 
 .listeresto__liste {
-  @media all and(min-width: $bkpt-mob) {
+  @include desk-and-tab-version {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -101,10 +100,10 @@
     height: 50vw;
     background-size: cover;
     background-position: center 70%;
-    @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+    @include tab-version {
       height: 25vw;
     }
-    @media all and(min-width: $bkpt-tab) {
+    @include desk-version {
       height: 15vw;
       background-position: center 60%;
     }
@@ -112,7 +111,7 @@
 }
 
 h1 {
-  @media all and(min-width: $bkpt-tab) {
+  @include desk-version {
     font-size: 2rem;
   }
 }
@@ -127,14 +126,14 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+  @include tab-version {
     margin-top: -3vw;
     justify-content: space-around;
     border-radius: 50px 50px 0 0;
     width: 75vw;
     margin-left: 12.5vw;
   }
-  @media all and(min-width: $bkpt-tab) {
+  @include desk-version {
     margin-top: -2.7vw;
     justify-content: space-around;
     border-radius: 75px 75px 0 0;

@@ -9,15 +9,13 @@
   &:focus {
     background-color: rgba($color-fond, 0.1);
     transition: background-color 0.3s;
+    @include ombre-hover;
   }
-  @media all and (min-width: $bkpt-mob) {
+  @include desk-and-tab-version {
     border-radius: 20px 20px 0 0;
     border: 1px solid;
     border-color: darken($color-fond, 9%);
     @include ombre;
-    &:focus {
-      @include ombre-hover;
-    }
   }
 }
 
@@ -29,7 +27,7 @@
   position: absolute;
   top: 19%;
   left: 25%;
-  @media all and (min-width: $bkpt-mob) {
+  @include desk-and-tab-version {
     left: 20vw;
   }
 }
@@ -53,13 +51,13 @@
     opacity: 0.75;
     transition: opacity 0.3s;
   }
-  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+  @include tab-version {
     width: $width-bouton-arrondi-tab;
     height: $height-bouton-arrondi-tab;
     line-height: $height-bouton-arrondi-tab;
     margin-left: 0.5 * (100vw - $width-bouton-arrondi-tab);
   }
-  @media all and(min-width: $bkpt-tab) {
+  @include desk-version {
     width: $width-bouton-arrondi-desk;
     height: $height-bouton-arrondi-desk;
     line-height: $height-bouton-arrondi-desk;
@@ -76,7 +74,7 @@
 }
 
 .presentation .bouton--arrondi {
-  @media all and(min-width: $bkpt-tab) {
+  @include desk-version {
     margin-left: 0.5 * ($width-presentation-desk - $width-bouton-arrondi-desk);
   }
   @media all and(min-width: 2100px) {
@@ -106,7 +104,7 @@
       transition: 0.2s;
     }
   }
-  @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+  @include tab-version {
     width: $width-etape-tab;
     height: $height-etape-tab;
     line-height: $height-etape-tab;
@@ -114,7 +112,7 @@
     margin-right: 0vw;
     font-size: 0.9rem;
   }
-  @media all and(min-width: $bkpt-tab) {
+  @include desk-version {
     width: $width-etape-desk;
     height: $height-etape-desk;
     line-height: $height-etape-desk;
@@ -129,7 +127,7 @@
   }
   .fas {
     padding-right: 1.8rem;
-    @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+    @include tab-version {
       padding-right: 1rem;
       font-size: 0.9rem;
     }
@@ -137,7 +135,6 @@
   &__number {
     width: 1.5rem;
     height: 1.5rem;
-    /*padding-top: 0.3rem;*/
     line-height: 1.5rem;
     font-size: 0.8rem;
     color: white;
@@ -147,11 +144,11 @@
     position: absolute;
     left: -2%;
     top: 38%;
-    @media all and (min-width: $bkpt-mob) and (max-width: $bkpt-tab) {
+    @include tab-version {
       left: -6%;
       top: 30%;
     }
-    @media all and(min-width: $bkpt-tab) {
+    @include desk-version {
       left: -3.5%;
     }
     @media all and(min-width: 2100px) {
@@ -191,5 +188,4 @@
 button {
   border: 0px;
   font-family: $font-texte;
-  /*padding-bottom: 1rem;*/
 }
