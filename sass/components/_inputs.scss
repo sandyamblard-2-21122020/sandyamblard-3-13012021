@@ -6,6 +6,7 @@
   border: 0px;
   text-align: center;
   font-weight: 700;
+  outline: none;
   &:focus {
     background-color: rgba($color-fond, 0.1);
     transition: background-color 0.3s;
@@ -35,7 +36,7 @@
 .bouton--arrondi {
   width: $width-bouton-arrondi-mob;
   height: $height-bouton-arrondi-mob;
-  margin-left: 0.5 * (100vw - $width-bouton-arrondi-mob);
+  margin-left: mglcenter($width-bouton-arrondi-mob);
   margin-bottom: 3vw;
   margin-top: 3vw;
   border-radius: 29px;
@@ -55,13 +56,13 @@
     width: $width-bouton-arrondi-tab;
     height: $height-bouton-arrondi-tab;
     line-height: $height-bouton-arrondi-tab;
-    margin-left: 0.5 * (100vw - $width-bouton-arrondi-tab);
+    margin-left: mglcenter($width-bouton-arrondi-tab);
   }
   @include desk-version {
     width: $width-bouton-arrondi-desk;
     height: $height-bouton-arrondi-desk;
     line-height: $height-bouton-arrondi-desk;
-    margin-left: 0.5 * (100vw - $width-bouton-arrondi-desk);
+    margin-left: mglcenter($width-bouton-arrondi-desk);
     margin-top: 2vw;
     margin-bottom: 0.2vw;
   }
@@ -86,7 +87,7 @@
   position: relative;
   width: $width-etape-mob;
   height: $height-etape-mob;
-  margin-left: 0.5 * (100vw - $width-etape-mob);
+  margin-left: mglcenter($width-etape-mob);
   margin-bottom: 5vw;
   line-height: $height-etape-mob;
   font-weight: 600;
@@ -188,4 +189,5 @@
 button {
   border: 0px;
   font-family: $font-texte;
+  outline: none;
 }

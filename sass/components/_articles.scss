@@ -1,7 +1,7 @@
 .article {
   width: $width-article-mob;
   height: $height-article-mob;
-  margin-left: 5vw;
+  margin-left: mglcenter($width-article-mob);
   margin-bottom: 5vw;
   @include bordradius;
   @include ombre;

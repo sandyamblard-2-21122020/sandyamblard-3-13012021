@@ -19,19 +19,19 @@
     margin-top: 0vw;
   }
   &__logo {
-    width: 55vw;
-    margin-left: 20vw;
+    width: $width-logo-mob;
+    margin-left: mglcenter($width-logo-mob);
     margin-bottom: 1vw;
     margin-top: 1vw;
     position: relative;
     @include tab-version {
-      width: 15vw;
-      margin-left: 42.5vw;
+      width: $width-logo-tab;
+      margin-left: mglcenter($width-logo-tab);
     }
     @include desk-version {
-      width: 11vw;
+      width: $width-logo-desk;
       margin-top: 0vw;
-      margin-left: 44.5vw;
+      margin-left: mglcenter($width-logo-desk);
     }
   }
   .fa-arrow-left {

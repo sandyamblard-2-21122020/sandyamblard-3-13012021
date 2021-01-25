@@ -27,14 +27,14 @@
   @include tab-version {
     padding-bottom: 0.1vw;
     width: $width-presentation-tab;
-    margin-left: 0.5 * (100-$width-presentation-tab);
+    margin-left: mglcenter($width-presentation-tab);
     margin-top: 1vw;
     @include bordradius;
   }
   @include desk-version {
     padding-bottom: 1vw;
     width: $width-presentation-desk;
-    margin-left: 0.5 * (100-$width-presentation-desk);
+    margin-left: mglcenter($width-presentation-desk);
     margin-top: 1vw;
     @include bordradius;
   }
@@ -58,7 +58,7 @@
   padding-top: 1vw;
   @include desk-and-tab-version {
     width: $width-listeresto-tab;
-    margin-left: 0.5 * (100-$width-listeresto-tab);
+    margin-left: mglcenter($width-listeresto-tab);
     @include bordradius;
   }
   a {

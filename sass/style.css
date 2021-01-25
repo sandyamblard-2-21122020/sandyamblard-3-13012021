@@ -92,6 +92,58 @@
   }
 }
 
+@-webkit-keyframes tour {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes tour {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes disparitionloader {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0%;
+    -webkit-transform: scale(0) translateX(100%);
+            transform: scale(0) translateX(100%);
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+  }
+}
+
+@keyframes disparitionloader {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0%;
+    -webkit-transform: scale(0) translateX(100%);
+            transform: scale(0) translateX(100%);
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -170,7 +222,7 @@ h5 {
 
 .header__logo {
   width: 55vw;
-  margin-left: 20vw;
+  margin-left: 22.5vw;
   margin-bottom: 1vw;
   margin-top: 1vw;
   position: relative;
@@ -889,6 +941,7 @@ h5 {
   border: 0px;
   text-align: center;
   font-weight: 700;
+  outline: none;
 }
 
 .saisieville:focus {
@@ -1034,7 +1087,7 @@ h5 {
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .etape {
-    width: 27vw;
+    width: 28vw;
     height: 6vw;
     line-height: 6vw;
     margin-left: 1vw;
@@ -1140,6 +1193,7 @@ h5 {
 button {
   border: 0px;
   font-family: "Roboto", sans-serif;
+  outline: none;
 }
 
 .loader__bloc {
@@ -1182,7 +1236,7 @@ button {
   font-family: "Roboto", sans-serif;
   font-size: 1.8rem;
   color: #99e2d0;
-  margin-bottom: 1.7vh;
+  margin-bottom: 3.5vh;
 }
 
 .loader--circle {
@@ -1192,8 +1246,8 @@ button {
   border: 0.5rem rgba(153, 226, 208, 0.6) dotted;
   display: inline-block;
   line-height: 100vh;
-  -webkit-animation: tour 3s linear 0s 2;
-          animation: tour 3s linear 0s 2;
+  -webkit-animation: tour 3s linear 0s infinite;
+          animation: tour 3s linear 0s infinite;
   position: relative;
 }
 
@@ -1209,7 +1263,7 @@ button {
   right: 1rem;
   left: 1rem;
   bottom: 1rem;
-  animation: tour 1.5s linear 0s 2 reverse;
+  animation: tour 1.5s linear 0s infinite reverse;
 }
 
 .loader--icone {
@@ -1219,8 +1273,8 @@ button {
   text-align: center;
   line-height: 100vh;
   font-size: 2.5rem;
-  -webkit-animation: tour 8s linear 0s 1;
-          animation: tour 8s linear 0s 1;
+  -webkit-animation: tour 8s linear 0s infinite;
+          animation: tour 8s linear 0s infinite;
   position: absolute;
   top: 35%;
 }
@@ -1240,57 +1294,6 @@ button {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-fill-mode: both;*/
-@-webkit-keyframes tour {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-@keyframes tour {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes disparitionloader {
-  0% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    opacity: 0%;
-    -webkit-transform: scale(0) translateX(100%);
-            transform: scale(0) translateX(100%);
-    -webkit-transform-origin: top left;
-            transform-origin: top left;
-  }
-}
-
-@keyframes disparitionloader {
-  0% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    opacity: 0%;
-    -webkit-transform: scale(0) translateX(100%);
-            transform: scale(0) translateX(100%);
-    -webkit-transform-origin: top left;
-            transform-origin: top left;
-  }
-}
-
 .article {
   width: 90vw;
   height: 65vw;

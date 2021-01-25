@@ -27,7 +27,7 @@
   font-family: $font-texte;
   font-size: 1.8rem;
   color: $color-tertiary;
-  margin-bottom: 1.7vh;
+  margin-bottom: 3.5vh;
 }
 
 .loader--circle {
@@ -37,7 +37,7 @@
   border: 0.5rem rgba($color-tertiary, 0.6) dotted;
   display: inline-block;
   line-height: 100vh;
-  animation: tour 3s linear 0s 2;
+  animation: tour 3s linear 0s infinite;
   position: relative;
   &::before {
     content: "";
@@ -51,7 +51,7 @@
     right: 1rem;
     left: 1rem;
     bottom: 1rem;
-    animation: tour 1.5s linear 0s 2 reverse;
+    animation: tour 1.5s linear 0s infinite reverse;
   }
 }
 
@@ -63,7 +63,7 @@
   line-height: 100vh;
   font-size: 2.5rem;
 
-  animation: tour 8s linear 0s 1;
+  animation: tour 8s linear 0s infinite;
   position: absolute;
   top: 35%;
 }
@@ -83,24 +83,3 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-fill-mode: both;*/
-
-@keyframes tour {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes disparitionloader {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0%;
-    transform: scale(0) translateX(100%);
-    transform-origin: top left;
-  }
-}
