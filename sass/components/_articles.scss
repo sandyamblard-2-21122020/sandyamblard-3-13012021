@@ -72,7 +72,7 @@
 
 @each $restaurant in $restaurants {
   .article__pict--#{$restaurant} {
-    background-image: url(/img/#{$restaurant}.jpg);
+    background-image: url("../img/#{$restaurant}.jpg");
   }
 }
 
